@@ -48,9 +48,6 @@ namespace RabbitMQExample
             #region Consumer Service
             
             using var channelConsumer = connection.CreateModel();
- 
-            //mail kuyruğuna erişiyoruz.
-            channelConsumer.QueueDeclare("mail", false, false, false, null);
 
             //Kuyruktan mail ile ilgili var olan verileri alıyoruz.
             var consumer = new EventingBasicConsumer(channelConsumer);
